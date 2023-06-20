@@ -8,6 +8,10 @@
                 <div class="card1_text">
                     <p> {{ goat.first_name}} {{ goat.last_name}} </p>
                 </div>
+                <div>
+                    <a routerLink="edit/{{goat.id}}" class="btn btn-success btn2">EDIT</a>    
+                    <a (click)="deleteGoat(goat)" class="btn btn-danger"> Delete</a>
+                </div>
             </div>
         </div>
     </div>
