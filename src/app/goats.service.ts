@@ -10,7 +10,7 @@ export class GoatsService {
       throw new Error('Method not implemented.');
     }
     constructor( private http: HttpClient){}
-    baseUrl: string = 'http:localhost/php/angular/super-goat/';
+    baseUrl: string = 'http://localhost/php/angular/super-goat/db/';
 
     getGoats(){
         return this.http.get<Goat[]>(this.baseUrl+'view.php');
