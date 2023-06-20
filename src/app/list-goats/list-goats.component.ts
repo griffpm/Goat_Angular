@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GOATS } from '../data-goats';
 import { Goat } from '../goat';
 import { Router } from '@angular/router';
 import { GoatsService } from '../goats.service';
@@ -12,6 +11,7 @@ import { GoatsService } from '../goats.service';
 export class ListGoatsComponent implements OnInit {
   //goatList : Goat[] = GOATS; // via data-goats
   goats:any;
+  goatsService: any;
 
   constructor(
     private router: Router,
@@ -37,4 +37,9 @@ export class ListGoatsComponent implements OnInit {
     })
   }
 
+  getSingleGoat(goat: Goat) {
+   
+  }
+  
 }
+

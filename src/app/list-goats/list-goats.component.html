@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div *ngFor="let goat of goats">
-            <div (click)="goToGoat(goat)" class="card1">
+            <div (click)="getSingleGoat(goat.id)" class="card1">
                 <div class="card1_img">
                     <img [src]="goat.url_img">
                 </div>

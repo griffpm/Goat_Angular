@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { GOATS } from '../data-goats';
+
 import { Goat } from '../goat';
 
 @Component({
@@ -17,7 +17,6 @@ export class DetailGoatsComponent implements OnInit {
     private router: Router){}
     
     ngOnInit(){
-      this.goatList = GOATS;
       const goatId: string|null = this.route.snapshot.paramMap.get('id');
       if(goatId){
         this.goat = this.goatList.find(goat=>goat.id == +goatId);
