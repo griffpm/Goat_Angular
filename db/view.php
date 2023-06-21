@@ -20,7 +20,7 @@ $conn = $database->dbConnection();
 $id = null;
 
 if (isset($_GET['id'])) {
-    $goats_id = filter_var($_GET['id'], FILTER_VALIDATE_INT, [
+    $id = filter_var($_GET['id'], FILTER_VALIDATE_INT, [
         'options' => [
             'default' => 'all_goats',
             'min_range' => 1
@@ -29,12 +29,12 @@ if (isset($_GET['id'])) {
 }
 
 try {
-    $sql = is_numeric($students_id) ? "SELECT * FROM `goats` WHERE id='$goats_id'" : "SELECT * FROM `goats`";   
+    $sql = is_numeric($id) ? "SELECT * FROM `goats` WHERE id='$id'" : "SELECT * FROM `goats`";   
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     if ($stmt->rowCount() > 0) :
         $data = null;
-        if (is_numeric($goats_id)) {
+        if (is_numeric($id)) {
             $data = $stmt->fetch(PDO::FETCH_ASSOC);
         } else {
             $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
