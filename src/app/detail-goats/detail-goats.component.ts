@@ -11,11 +11,13 @@ import { GoatsService } from '../goats.service';
 })
 export class DetailGoatsComponent implements OnInit {
   // goatList: Goat[] = [];
-  goat: Goat|undefined;
+  goat:any;
+  // goat: Goat|undefined;
   
   constructor( 
     private route: ActivatedRoute,
-    private goatService: GoatsService){}
+    private goatService: GoatsService,
+    ){}
     
     // ngOnInit(){
     //   const goatId: string|null = this.route.snapshot.paramMap.get('id');
@@ -25,17 +27,35 @@ export class DetailGoatsComponent implements OnInit {
     //   }
 
     // }
-    ngOnInit() {
+    // ngOnInit() {
+    //   const goatId: string | null = this.route.snapshot.paramMap.get('id');
+    //   if (goatId) {
+    //     this.goatService.getSingleGoat(goatId).subscribe({
+    //       next: (goat: Goat) => {
+    //         this.goat = goat;
+    //         console.log(this.goat);
+    //         console.log(goatId);
+    //         console.log(goat);
+    //       },
+    //       error: (error: any) => {
+    //         console.error(error);
+    //       }
+    //     });}}}
+
+
+ngOnInit() {
       const goatId: string | null = this.route.snapshot.paramMap.get('id');
       if (goatId) {
-        this.goatService.getSingleGoat(goatId).subscribe({
-          next: (goat: Goat) => {
-            this.goat = goat;
-            console.log(this.goat);
+        this.goatService.getSingleGoat(goatId).subscribe(
+          (result: any) => {
+            this.goat = result.data;
+            
+            console.log(result.data);
+            // console.log(this.goat);
             console.log(goatId);
-            console.log(goat);
-          },
-          error: (error: any) => {
-            console.error(error);
+            // console.log(goat);
           }
-        });}}}
+        );
+
+}}
+  }
