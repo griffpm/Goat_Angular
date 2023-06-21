@@ -17,7 +17,7 @@ export class GoatsService {
     }
 
     getSingleGoat(id:any){
-        return this.http.get<Goat[]>(this.baseUrl+'view.php?id='+id);
+        return this.http.get<Goat>(this.baseUrl+'view.php?id='+id);
     }
 
     deleteGoat(id:any){

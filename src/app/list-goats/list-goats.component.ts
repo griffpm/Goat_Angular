@@ -36,10 +36,5 @@ export class ListGoatsComponent implements OnInit {
       this.goats = this.goats.filter((u: any) => u !== goat);
     })
   }
-
-  getSingleGoat(goat: Goat) {
-   
-  }
-  
 }
 
