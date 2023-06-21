@@ -9,7 +9,7 @@
                     <p> {{ goat.first_name}} {{ goat.last_name}} </p>
                 </div>
                 <div class="card1_link">
-                    <a routerLink="edit/{{goat.id}}" class="btn btn-success btn2">Edit</a>
+                    <a href="edit/{{goat.id}}" class="btn btn-success btn2">Edit</a>
                     <a (click)="deleteGoat(goat)" class="btn btn-danger"> Delete</a> 
                 </div>
                     

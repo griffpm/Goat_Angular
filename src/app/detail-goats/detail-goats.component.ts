@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-import { Goat } from '../goat';
 import { GoatsService } from '../goats.service';
 
 @Component({
@@ -19,43 +17,16 @@ export class DetailGoatsComponent implements OnInit {
     private goatService: GoatsService,
     ){}
     
-    // ngOnInit(){
-    //   const goatId: string|null = this.route.snapshot.paramMap.get('id');
-    //   if(goatId){
-    //     this.goat = this.goatList.find(goat=>goat.id == +goatId);
-    //     console.log(goatId);
-    //   }
-
-    // }
-    // ngOnInit() {
-    //   const goatId: string | null = this.route.snapshot.paramMap.get('id');
-    //   if (goatId) {
-    //     this.goatService.getSingleGoat(goatId).subscribe({
-    //       next: (goat: Goat) => {
-    //         this.goat = goat;
-    //         console.log(this.goat);
-    //         console.log(goatId);
-    //         console.log(goat);
-    //       },
-    //       error: (error: any) => {
-    //         console.error(error);
-    //       }
-    //     });}}}
-
-
 ngOnInit() {
       const goatId: string | null = this.route.snapshot.paramMap.get('id');
       if (goatId) {
         this.goatService.getSingleGoat(goatId).subscribe(
           (result: any) => {
             this.goat = result.data;
-            
             console.log(result.data);
-            // console.log(this.goat);
             console.log(goatId);
-            // console.log(goat);
+            
           }
         );
-
 }}
   }

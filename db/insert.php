@@ -58,14 +58,14 @@ try {
     last_name,
     company,
     date_of_birth,
-    url_img,
+    url_img
     ) 
     VALUES(
     :first_name,
     :last_name,
     :company,
     :date_of_birth,
-    :url_img,
+    :url_img
     )";
  
     $stmt = $conn->prepare($query);

@@ -34,6 +34,7 @@ export class ListGoatsComponent implements OnInit {
     //console.log(id);
     this.goatservice.deleteGoat(goat.id).subscribe(data=>{
       this.goats = this.goats.filter((u: any) => u !== goat);
+      this.router.navigate(['/']);
     })
   }
 }
