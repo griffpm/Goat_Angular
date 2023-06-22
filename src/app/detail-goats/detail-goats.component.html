@@ -10,6 +10,11 @@
                 <p>Créateur/Fondateur/CEO de l'entreprise: {{ goat.company }}</p>
             </div>
         </div>
-        <a routerLink="/goats">Retour</a>
+        <div>
+            <a routerLink="/goats">Retour</a>
+            <a (click)="deleteGoat(goat)" class="btn btn-danger"> Delete</a>
+            <a href="edit/{{goat.id}}" class="btn btn-success btn2">Edit</a>
+        </div>
+        
     </div>
 </div>
