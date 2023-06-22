@@ -13,6 +13,7 @@ export class DetailGoatsComponent implements OnInit {
   goat:any;
   goats:any;
   goatsService: any;
+  dataService: any;
   // goat: Goat|undefined;
   
   constructor( 
