@@ -10,7 +10,6 @@ import { DetailGoatsComponent } from './detail-goats/detail-goats.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule} from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,7 @@ import { LoginComponent } from './login/login.component';
     PageNotFoundComponent,
     AddGoatsComponent,
     EditGoatsComponent,
-    LoginComponent
+    
   ],
   imports: [
     BrowserModule,
