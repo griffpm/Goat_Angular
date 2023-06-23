@@ -46,7 +46,7 @@ export class EditGoatsComponent {
     this.goatService.editGoat(this.addForm.value).subscribe(
       (data:any)=>{
         console.log(data);
-        this.router.navigate(['/']);
+        this.router.navigate(['/goats']);
       },
       error=>{
         alert(error);
