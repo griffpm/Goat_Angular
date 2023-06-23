@@ -10,12 +10,12 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   // {path: '', redirectTo:'goats', pathMatch:'full'},
-  { path: '', component: LoginComponent },
+  { path: '', component: ListGoatsComponent },
   { path: 'login', component: LoginComponent },
-  {path: 'add-goat', component: AddGoatsComponent},
-  {path:'edit/:id', component: EditGoatsComponent},
-  {path: 'goats', component: ListGoatsComponent},
-  {path: 'goat/:id', component: DetailGoatsComponent},
+  { path: 'add-goat', component: AddGoatsComponent},
+  { path: 'goats', component: ListGoatsComponent},
+  { path:'edit/:id', component: EditGoatsComponent},
+  { path: 'goat/:id', component: DetailGoatsComponent},
 ];
 
 @NgModule({
